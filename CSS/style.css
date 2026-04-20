@@ -1,0 +1,89 @@
+body{
+    background: linear-gradient(135deg, #c2fff6 0%, #ffd596 100%);
+}
+
+.menu{
+    display: flex;
+    justify-content: center; /* Centre le menu sur la page */
+    gap: 30px;               /* L'espace entre chaque carte */
+    margin-top: 150px;
+}
+
+.carte {
+    width: 250px;
+    height: 280px;
+    display: flex;
+    align-items: center;     /* Centre le texte verticalement */
+    justify-content: center; /* Centre le texte horizontalement */
+    text-decoration: none;   /* Enlève le trait sous le lien */
+    color: white;            /* Texte en blanc pour ressortir sur les images */
+    font-family: Arial, sans-serif;
+    border-radius: 15px;     /* Bords arrondis pour le côté moderne */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* L'ombre du PowerPoint */
+
+    /* Animation super sympa quand on survole ! */
+    transition: transform 0.3s ease;
+}
+
+/* 3. L'effet au survol de la souris */
+.carte:hover {
+    transform: scale(1.05); /* Grossit légèrement la carte */
+}
+
+/* 4. On assombrit un peu l'image de fond pour qu'on puisse lire le texte */
+.carte h2 {
+    background-color: rgba(0, 0, 0, 0.6); /* Fond noir semi-transparent derrière le texte */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.serie {
+    /*background-image: url('../Images/serie.jpg');*/
+    background-size: cover; /* L'image s'adapte à la taille de la carte */
+    background-position: center;
+}
+
+.saison {
+   /* background-image: url('../Images/saison.jpg');*/
+    background-size: cover;
+    background-position: center;
+}
+
+.episode {
+    /*background-image: url('../Images/episode.jpg');*/
+    background-size: cover;
+    background-position: center;
+}
+
+.detail h1{
+    text-align: center;
+}
+
+
+
+table {
+    margin-top: 80px;
+    border-style: initial;
+    border-color: red;
+}
+.insererSerie{
+        position: absolute; /* Permet de placer l'élément librement par rapport à la page */
+        top: 20px;          /* Distance par rapport au haut de la page */
+        right: 20px;        /* Distance par rapport à la droite de la page */
+
+}
+.insererSerie a {
+    display: block;        /* Permet au lien de prendre toute la place dans son cadre */
+    text-decoration: none; /* Enlève la ligne moche sous le lien */
+    color: #333;           /* Couleur du texte (gris foncé/noir) */
+    text-align: center;    /* Centre le texte à l'intérieur du cadre */
+
+    /* Le Cadre */
+    border: 2px solid #2c3e50; /* Épaisseur, style (continu), et couleur (bleu foncé) */
+    padding: 10px 20px;      /* L'espace "coussin" (haut/bas puis gauche/droite) */
+    background-color: white; /* Fond blanc pour bien lire le texte */
+    border-radius: 5px;      /* Arrondit très légèrement les angles (optionnel) */
+
+    /* L'Ombre */
+    /* 4px à droite, 4px en bas, 8px de flou, couleur noire un peu transparente (rgba) */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
