@@ -89,17 +89,19 @@ function updateSerie(array $Serie): array
                WHERE serie_id = $1";
 
     pg_prepare($ptrDB, "reqPrepUpdate", $query);
+    $vraiSpinOffId = ($Serie["spin_off_id"] == "-1" || $Serie["spin_off_id"] == "") ? null : $Serie["spin_off_id"];
     $ptrQuery = pg_execute($ptrDB, "reqPrepUpdate", array(
         $Serie["serie_id"],
         $Serie["nom"],
         $Serie["descriptions"],
         $Serie["annee_debut"],
         $Serie["annee_fin"],
-        $Serie["spin_off_id"]
+        $vraiSpinOffId
     ));
     if ($ptrQuery) {
         echo "Modifié avec succès la serie a l'id  = " . $Serie["serie_id"];// message lorsque pg_execute s'execute
         echo "<br/>";
+
     } else {
         echo "Erreur : mise a jour echoué " . pg_last_error($ptrDB);
     }

@@ -28,7 +28,7 @@ $toutesLesSeries = getAllSerie();
         <p>Annee de fin:</p>
         <input type="date" name="annee_fin" required><br>
 
-        <p> Quelle Spin_off_id :</p>
+        <p> Quel Spin_off_id :</p>
         <select name="serie_id" required>
             <option value="">-- Choisissez une série --</option>
             <option value="-1">Aucun spin-off</option>
@@ -45,6 +45,7 @@ $toutesLesSeries = getAllSerie();
 
     </form>
 </div>
+<a href="AfficheSerie.php">Retour</a>
 </body>
 </html>
 

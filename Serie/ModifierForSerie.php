@@ -30,12 +30,13 @@ $toutesLesSeries = getAllSerie();
     <p>Annee de fin :</p>
     <input type="date" name="annee_fin" value="<?= $serie['annee_fin'] ?>" required><br>
 
-    <p>Spin-off :</p>
-    <select name="serie_id_spinoff">
-        <option value="">-- Choisissez --</option>
+    <p> Quel Spin_off_id :</p>
+    <select name="spin_off_id" required>
+        <option value="">-- Choisissez une série --</option>
+        <option value="-1" <?= ($serie['spin_off_id'] == null) ? 'selected' : '' ?>>Aucun spin-off</option>
         <?php foreach ($toutesLesSeries as $s) : ?>
             <option value="<?= $s['serie_id'] ?>"
-                <?= $s['serie_id'] == $serie['spin_off_id'] ? 'selected' : '' ?>>
+                    <?= $s['serie_id'] == $serie['spin_off_id'] ? 'selected' : '' ?>>
                 <?= $s['nom'] ?>
             </option>
         <?php endforeach; ?>
@@ -43,5 +44,6 @@ $toutesLesSeries = getAllSerie();
 
     <input type="submit" value="Modifier">
 </form>
+<a href="AfficheSerie.php">Retour</a>
 </body>
 </html>

@@ -64,6 +64,7 @@ table {
     margin-top: 80px;
     border-style: initial;
     border-color: red;
+    border-collapse: collapse;
 }
 .insererSerie{
         position: absolute; /* Permet de placer l'élément librement par rapport à la page */
@@ -86,4 +87,12 @@ table {
     /* L'Ombre */
     /* 4px à droite, 4px en bas, 8px de flou, couleur noire un peu transparente (rgba) */
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/** Style de Saison autre que les autres  */
+
+.tableau_saison{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; /* Le tableau prendra 80% de la largeur de l'écran */
 }

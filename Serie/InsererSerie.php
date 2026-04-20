@@ -1,6 +1,6 @@
 <?php
 
-require_once'InsererForSerie.php';
+require_once'fonctionSerie.php';
 
 $Serie = [
     "nom" => $_POST['nom'],

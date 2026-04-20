@@ -1,6 +1,6 @@
 <?php
 require_once 'fonctionSerie.php';
-$series = getAllSerie();
+$serie = getAllSerie();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -23,7 +23,7 @@ $series = getAllSerie();
         <th>Spin_Off_Id</th>
         <th>Actions</th>
     </tr>
-    <?php foreach ($series as $serie) : ?>
+    <?php foreach ($serie as $series) : ?>
         <tr>
             <td><?= $serie['serie_id'] ?></td>
             <td><?= $serie['nom'] ?></td>
